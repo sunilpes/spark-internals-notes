@@ -1,0 +1,95 @@
+---
+title: Spark SQL Planning Class Hierarchy
+---
+classDiagram
+    direction TB
+
+    TreeNode <|-- QueryPlan
+    TreeNode <|-- LeafLike
+    TreeNode <|-- UnaryLike
+    TreeNode <|-- BinaryLike
+
+    QueryPlan <|-- LogicalPlan
+    QueryPlan <|-- SparkPlan
+
+    LogicalPlan <|-- LeafNode
+    LogicalPlan <|-- UnaryNode
+    LogicalPlan <|-- BinaryNode
+
+    SparkPlan <|-- LeafExecNode
+    SparkPlan <|-- UnaryExecNode
+    SparkPlan <|-- BinaryExecNode
+
+    LeafNode <|-- UnresolvedRelation
+    LeafNode <|-- LogicalRelation
+    UnaryNode <|-- Project
+    UnaryNode <|-- Filter
+    BinaryNode <|-- Join
+
+    LeafExecNode <|-- FileSourceScanExec
+    UnaryExecNode <|-- ProjectExec
+    UnaryExecNode <|-- FilterExec
+    BinaryExecNode <|-- BroadcastHashJoinExec
+    BinaryExecNode <|-- SortMergeJoinExec
+
+    Strategy <|-- BasicOperators
+    Strategy <|-- JoinSelection
+    Strategy <|-- FileSourceStrategy
+    SparkPlanner o-- Strategy
+
+    BasicOperators ..> ProjectExec
+    BasicOperators ..> FilterExec
+    JoinSelection ..> BroadcastHashJoinExec
+    JoinSelection ..> SortMergeJoinExec
+    FileSourceStrategy ..> FileSourceScanExec
+
+    class TreeNode {
+        +children
+    }
+    class LeafLike {
+        +children = Nil
+    }
+    class UnaryLike {
+        +child
+    }
+    class BinaryLike {
+        +left
+        +right
+    }
+    class QueryPlan {
+        +output
+    }
+    class LogicalPlan {
+        describes the WHAT
+    }
+    class SparkPlan {
+        describes the HOW
+    }
+    class Project {
+        +projectList
+        +child
+    }
+    class Filter {
+        +condition
+        +child
+    }
+    class Join {
+        +left
+        +right
+        +joinType
+    }
+    class ProjectExec {
+        +projectList
+    }
+    class FilterExec {
+        +condition
+    }
+    class FileSourceScanExec {
+        +relation
+    }
+    class SparkPlanner {
+        +strategies
+    }
+    class Strategy {
+        +apply()
+    }

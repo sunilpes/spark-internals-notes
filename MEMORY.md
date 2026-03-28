@@ -1,0 +1,21 @@
+# Memory Index
+
+- [project_spark_sql_architecture.md](project_spark_sql_architecture.md) — Key classes, inheritance hierarchies, and query execution pipeline in Spark SQL core and catalyst modules
+- [project_streaming_dedup_internals.md](project_streaming_dedup_internals.md) — How dropDuplicates works in Spark Structured Streaming: stateful (state store) path vs batch (foreachBatch) path, key source files, execution flow
+- [project_spark_sql_planning_explained.md](project_spark_sql_planning_explained.md) — Complete walkthrough of Spark SQL planning: TreeNode hierarchy, Logical vs Physical plans, LeafNode/UnaryNode/BinaryNode, QueryExecution pipeline, Strategies, and recursive planning algorithm
+- [project_whole_stage_codegen_explained.md](project_whole_stage_codegen_explained.md) — How WholeStageCodegenExec works: produce/consume protocol, operator code fusion, InputAdapter boundaries, CollapseCodegenStages rule, generated Java code examples
+- [project_spark_sql_parsing_explained.md](project_spark_sql_parsing_explained.md) — How SQL string becomes LogicalPlan: ANTLR grammar/lexer/parser, AstBuilder visitor, UnresolvedRelation, and full walkthrough of parsing SELECT/FROM/WHERE
+- [spark-sql-planning-classes.mmd](spark-sql-planning-classes.mmd) — Mermaid class diagram of Spark SQL planning hierarchy: TreeNode, QueryPlan, LogicalPlan, SparkPlan, node shapes, concrete operators, and Strategy bridge
+- [project_spark_5week_learning_plan.md](project_spark_5week_learning_plan.md) — 5-week structured plan to learn Spark internals: core/scheduler, catalyst, physical execution, data sources/streaming, storage/tuning (started 2026-03-24)
+- [project_sparksession_internals.md](project_sparksession_internals.md) — SparkSession breakdown: SharedState, SessionState, constructor params, user-facing APIs
+- [project_spark_file_split_partitioning.md](project_spark_file_split_partitioning.md) — How Spark splits large files: maxSplitBytes calc, PartitionedFile splitting, bin-packing, configs, end-to-end flow
+- [project_spark_rpc_inbox_dispatcher.md](project_spark_rpc_inbox_dispatcher.md) — Spark RPC internals: Dispatcher, MessageLoop, Inbox, thread pools, end-to-end message flow from network to RpcEndpoint
+- [project_spark_rpc_message_format.md](project_spark_rpc_message_format.md) — RPC wire format: RequestMessage structure, serialization, case class messages (LaunchTask, StatusUpdate, Heartbeat), concrete flow example
+- [project_spark_optimizer_rule_execution.md](project_spark_optimizer_rule_execution.md) — How Catalyst optimizer picks/applies rules: batch ordering, fixed-point loop, pattern matching, RuleExecutor.execute(), concrete walkthrough
+- [project_spark_top_optimizer_rules_explained.md](project_spark_top_optimizer_rules_explained.md) — Top 6 optimizer rules with before/after tree examples: PushDownPredicates, ColumnPruning, ConstantFolding, CollapseProject, BooleanSimplification, PruneFilters
+- [project_spark_join_strategy_selection.md](project_spark_join_strategy_selection.md) — Join strategy selection: stats collection, BroadcastHash vs SortMerge vs ShuffledHash, size thresholds, JoinSelection logic, hints, AQE re-planning
+- [project_spark_aqe_stats_flow.md](project_spark_aqe_stats_flow.md) — AQE stats flow: MapStatus from executors, MapOutputTracker aggregation, MapOutputStatistics, AdaptiveSparkPlanExec re-optimization, runtime decisions
+- [project_spark_aqe_stage_splitting.md](project_spark_aqe_stage_splitting.md) — AQE stage splitting: Exchange=boundary, bottom-up creation, submit-wait-reoptimize loop, LogicalQueryStage runtime stats, concrete join strategy change walkthrough
+- [project_spark_hadoop_integration.md](project_spark_hadoop_integration.md) — How Spark uses Hadoop: FileSystem API, InputFormat/OutputFormat, Configuration, OutputCommitter, compression, YARN, security/Kerberos, data locality
+- [project_spark_distributed_systems_topics.md](project_spark_distributed_systems_topics.md) — Key distributed systems topics for Spark: RPC, scheduling, shuffle, fault tolerance, memory mgmt, learning order, resources, current gaps
+- [project_spark_listener_bus.md](project_spark_listener_bus.md) — SparkListenerBus: driver-only async event bus, event producers, consumers (SparkUI, logging), pattern-match routing
