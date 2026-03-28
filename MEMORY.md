@@ -19,3 +19,5 @@
 - [project_spark_hadoop_integration.md](project_spark_hadoop_integration.md) — How Spark uses Hadoop: FileSystem API, InputFormat/OutputFormat, Configuration, OutputCommitter, compression, YARN, security/Kerberos, data locality
 - [project_spark_distributed_systems_topics.md](project_spark_distributed_systems_topics.md) — Key distributed systems topics for Spark: RPC, scheduling, shuffle, fault tolerance, memory mgmt, learning order, resources, current gaps
 - [project_spark_listener_bus.md](project_spark_listener_bus.md) — SparkListenerBus: driver-only async event bus, event producers, consumers (SparkUI, logging), pattern-match routing
+- [project_spark_heartbeat_contents.md](project_spark_heartbeat_contents.md) — Executor heartbeat: executorId, per-task accumulators, blockManagerId, 20 executor metrics (JVM, GC, memory), driver handling
+- [feedback_sync_repo_and_memory.md](feedback_sync_repo_and_memory.md) — Always sync memory files to ~/gitrepos/spark-internals-notes/ GitHub repo when saving
