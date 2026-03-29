@@ -26,4 +26,5 @@
 - [project_spark_memory_unrolling_explained.md](project_spark_memory_unrolling_explained.md) — Memory unrolling: gradual materialization, periodic checks, MEMORY_ONLY vs MEMORY_AND_DISK fallback, step-by-step example
 - [project_spark_blockmanager_file_processing.md](project_spark_blockmanager_file_processing.md) — When BlockManager IS/ISN'T involved: file reads (no BM), shuffle (disk), broadcast (memory), cache (explicit only)
 - [project_spark_parquet_count_optimization.md](project_spark_parquet_count_optimization.md) — Why count() reads full file by default, aggregate pushdown to Parquet footer (disabled), ANALYZE TABLE, how to enable
+- [project_spark_format_aware_optimization.md](project_spark_format_aware_optimization.md) — Format-aware rules: partition pruning, predicate pushdown to row groups, column pruning, aggregate pushdown, V2 interfaces, per-format capability matrix
 - [feedback_sync_repo_and_memory.md](feedback_sync_repo_and_memory.md) — Always sync memory files to ~/gitrepos/spark-internals-notes/ GitHub repo when saving
