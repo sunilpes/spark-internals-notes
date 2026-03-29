@@ -22,4 +22,5 @@
 - [project_spark_heartbeat_contents.md](project_spark_heartbeat_contents.md) — Executor heartbeat: executorId, per-task accumulators, blockManagerId, 20 executor metrics (JVM, GC, memory), driver handling
 - [project_spark_task_completion_tracking.md](project_spark_task_completion_tracking.md) — Task/stage/job completion: StatusUpdate flow, TaskSetManager, DAGScheduler stage tracking, JobWaiter, child stage triggering
 - [project_spark_blockmanager_internals.md](project_spark_blockmanager_internals.md) — BlockManager: MemoryStore, DiskStore, read/write/spill flows, block types, locking, replication, BlockManagerMaster, driver vs executor
+- [project_spark_rdd_block_creation_format.md](project_spark_rdd_block_creation_format.md) — RDD block creation: lazy eval, memory format (Deserialized vs Serialized MemoryEntry), disk format (file layout, serialization), StorageLevel, spill/eviction
 - [feedback_sync_repo_and_memory.md](feedback_sync_repo_and_memory.md) — Always sync memory files to ~/gitrepos/spark-internals-notes/ GitHub repo when saving
