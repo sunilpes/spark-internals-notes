@@ -24,4 +24,6 @@
 - [project_spark_blockmanager_internals.md](project_spark_blockmanager_internals.md) — BlockManager: MemoryStore, DiskStore, read/write/spill flows, block types, locking, replication, BlockManagerMaster, driver vs executor
 - [project_spark_rdd_block_creation_format.md](project_spark_rdd_block_creation_format.md) — RDD block creation: lazy eval, memory format (Deserialized vs Serialized MemoryEntry), disk format (file layout, serialization), StorageLevel, spill/eviction
 - [project_spark_memory_unrolling_explained.md](project_spark_memory_unrolling_explained.md) — Memory unrolling: gradual materialization, periodic checks, MEMORY_ONLY vs MEMORY_AND_DISK fallback, step-by-step example
+- [project_spark_blockmanager_file_processing.md](project_spark_blockmanager_file_processing.md) — When BlockManager IS/ISN'T involved: file reads (no BM), shuffle (disk), broadcast (memory), cache (explicit only)
+- [project_spark_parquet_count_optimization.md](project_spark_parquet_count_optimization.md) — Why count() reads full file by default, aggregate pushdown to Parquet footer (disabled), ANALYZE TABLE, how to enable
 - [feedback_sync_repo_and_memory.md](feedback_sync_repo_and_memory.md) — Always sync memory files to ~/gitrepos/spark-internals-notes/ GitHub repo when saving
