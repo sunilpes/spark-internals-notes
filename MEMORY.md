@@ -28,4 +28,5 @@
 - [project_spark_parquet_count_optimization.md](project_spark_parquet_count_optimization.md) — Why count() reads full file by default, aggregate pushdown to Parquet footer (disabled), ANALYZE TABLE, how to enable
 - [project_spark_format_aware_optimization.md](project_spark_format_aware_optimization.md) — Format-aware rules: partition pruning, predicate pushdown to row groups, column pruning, aggregate pushdown, V2 interfaces, per-format capability matrix
 - [project_spark_all_optimizer_rules.md](project_spark_all_optimizer_rules.md) — Complete catalog of 80+ optimizer rules by category: push down, combine, eliminate, fold, filter, join, subquery, aggregate, with batch execution order
+- [project_spark_physical_planning_walkthrough.md](project_spark_physical_planning_walkthrough.md) — Physical planning: recursive top-down algorithm, PlanLater, Strategy order, complex 3-table join walkthrough, logical-to-physical node mapping
 - [feedback_sync_repo_and_memory.md](feedback_sync_repo_and_memory.md) — Always sync memory files to ~/gitrepos/spark-internals-notes/ GitHub repo when saving
