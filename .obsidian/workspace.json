@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "project_spark_blockmanager_internals.md",
+                "file": "project_spark_listener_bus.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "project_spark_blockmanager_internals"
+              "title": "project_spark_listener_bus"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#spark-distributed",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "project_spark_blockmanager_internals.md",
+                "file": "project_spark_listener_bus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for project_spark_blockmanager_internals"
+              "title": "Backlinks for project_spark_listener_bus"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "project_spark_blockmanager_internals.md",
+                "file": "project_spark_listener_bus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from project_spark_blockmanager_internals"
+              "title": "Outgoing links from project_spark_listener_bus"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "project_spark_blockmanager_internals.md",
+                "file": "project_spark_listener_bus.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of project_spark_blockmanager_internals"
+              "title": "Outline of project_spark_listener_bus"
             }
           }
         ]
@@ -183,15 +183,20 @@
       "bases:Create new base": false
     }
   },
-  "active": "fbc74ce4ee803e16",
+  "active": "9281792b211fb28e",
   "lastOpenFiles": [
     "_Graph Guide.md",
-    "project_spark_rdd_block_creation_format.md",
-    "project_spark_blockmanager_internals.md",
-    "_MOC.md",
-    "project_spark_parquet_count_optimization.md",
-    "project_spark_join_strategy_selection.md",
+    "project_spark_rpc_message_format.md",
     "project_spark_heartbeat_contents.md",
+    "project_spark_join_strategy_selection.md",
+    "project_spark_listener_bus.md",
+    "MEMORY.md",
+    "_MOC.md",
+    "project_spark_sql_architecture.md",
+    "project_spark_5week_learning_plan.md",
+    "project_spark_blockmanager_internals.md",
+    "project_spark_rdd_block_creation_format.md",
+    "project_spark_parquet_count_optimization.md",
     "project_spark_hadoop_integration.md",
     "project_spark_format_aware_optimization.md",
     "project_spark_file_split_partitioning.md",
@@ -202,8 +207,6 @@
     "project_spark_aqe_stats_flow.md",
     "project_spark_aqe_stage_splitting.md",
     "project_spark_aqe_skew_join_type_constraints.md",
-    "project_spark_all_optimizer_rules.md",
-    "project_spark_5week_learning_plan.md",
-    "MEMORY.md"
+    "project_spark_all_optimizer_rules.md"
   ]
 }
