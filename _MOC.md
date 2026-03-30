@@ -13,7 +13,8 @@ This is the entry point for navigating the Spark internals knowledge graph. Note
 The complete journey of a SQL query through Spark:
 
 1. [[project_spark_sql_parsing_explained]] -- SQL string to unresolved LogicalPlan
-2. [[project_spark_sql_planning_explained]] -- TreeNode hierarchy, planning pipeline
+2. [[project_spark_ast_tree_building]] -- How ANTLR parse tree becomes LogicalPlan via AstBuilder
+3. [[project_spark_sql_planning_explained]] -- TreeNode hierarchy, planning pipeline
 3. [[project_spark_optimizer_rule_execution]] -- How optimizer picks and applies rules
 4. [[project_spark_top_optimizer_rules_explained]] -- Top 6 rules with before/after examples
 5. [[project_spark_all_optimizer_rules]] -- Complete catalog of 80+ rules

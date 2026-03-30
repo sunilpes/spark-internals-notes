@@ -2,6 +2,7 @@
 name: Spark AST Tree Building
 description: How AST trees are built — two stages: ANTLR parse tree from grammar, then AstBuilder visitor converts to LogicalPlan bottom-up, with concrete SQL examples showing node creation
 type: project
+tags: [spark-sql, spark-optimization]
 ---
 
 ## How AST Trees Are Built in Spark
@@ -81,3 +82,11 @@ UnresolvedAttribute("name")   → AttributeReference("name", StringType)
 ### Key Distinction
 
 The AST is Spark's `LogicalPlan` tree, NOT ANTLR's parse tree. AstBuilder is the translator between the two.
+
+## Related Notes
+- [[project_spark_sql_parsing_explained]] — Full parsing walkthrough: ANTLR grammar/lexer/parser, AstBuilder visitor
+- [[project_spark_sql_planning_explained]] — Next phase: how LogicalPlan becomes physical plan
+- [[project_spark_sql_architecture]] — Overall SQL architecture and query execution pipeline
+- [[project_sparksession_internals]] — Where sqlParser lives in SessionState
+- [[project_spark_optimizer_rule_execution]] — How optimizer transforms the LogicalPlan after parsing
+- [[project_spark_physical_planning_walkthrough]] — How the optimized LogicalPlan becomes a physical plan

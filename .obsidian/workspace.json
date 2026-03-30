@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "project_spark_listener_bus.md",
-                "mode": "preview",
+                "file": "project_spark_ast_tree_building.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "project_spark_listener_bus"
+              "title": "project_spark_ast_tree_building"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "project_spark_listener_bus.md",
+                "file": "project_spark_ast_tree_building.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for project_spark_listener_bus"
+              "title": "Backlinks for project_spark_ast_tree_building"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "project_spark_listener_bus.md",
+                "file": "project_spark_ast_tree_building.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from project_spark_listener_bus"
+              "title": "Outgoing links from project_spark_ast_tree_building"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "project_spark_listener_bus.md",
+                "file": "project_spark_ast_tree_building.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of project_spark_listener_bus"
+              "title": "Outline of project_spark_ast_tree_building"
             }
           }
         ]
@@ -183,13 +183,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "9281792b211fb28e",
+  "active": "fbc74ce4ee803e16",
   "lastOpenFiles": [
+    "project_spark_ast_tree_building.md.tmp.64808.1774899937343",
+    "project_spark_listener_bus.md",
+    "project_spark_ast_tree_building.md",
     "_Graph Guide.md",
     "project_spark_rpc_message_format.md",
     "project_spark_heartbeat_contents.md",
     "project_spark_join_strategy_selection.md",
-    "project_spark_listener_bus.md",
     "MEMORY.md",
     "_MOC.md",
     "project_spark_sql_architecture.md",
