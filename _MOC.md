@@ -77,6 +77,7 @@ The complete journey of a SQL query through Spark:
 - [[project_spark_distributed_systems_topics]] -- Key topics for understanding Spark
 - [[project_spark_hadoop_integration]] -- FileSystem API, YARN, Kerberos
 - [[project_spark_rpc_inbox_dispatcher]] -- Netty RPC internals
+- [[project_spark_no_consensus_algo]] -- No Raft/Paxos — single driver, consensus only in YARN/HDFS/ZK
 
 ## Streaming
 
