@@ -33,4 +33,5 @@
 - [project_spark_cbo_external_sources.md](project_spark_cbo_external_sources.md) — CBO with external sources: JDBC/Postgres/MySQL stats gaps, workarounds (save to table, hints, V2 pushdown, AQE), best practices
 - [project_spark_aqe_skew_join_handling.md](project_spark_aqe_skew_join_handling.md) — AQE skew handling: detection threshold, mapper-level splitting, replication, PartialReducerPartitionSpec, concrete country-skew example
 - [project_spark_aqe_skew_join_type_constraints.md](project_spark_aqe_skew_join_type_constraints.md) — Why AQE skew optimization can't split all join types: NULL correctness, partial data → wrong NULLs/duplicates for outer joins
+- [project_spark_skew_join_workarounds.md](project_spark_skew_join_workarounds.md) — Skew workarounds: LeftOuter+LeftAnti decomposition, key salting, separate+broadcast, increase parallelism
 - [feedback_sync_repo_and_memory.md](feedback_sync_repo_and_memory.md) — Always sync memory files to ~/gitrepos/spark-internals-notes/ GitHub repo when saving
