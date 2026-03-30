@@ -31,4 +31,5 @@
 - [project_spark_physical_planning_walkthrough.md](project_spark_physical_planning_walkthrough.md) — Physical planning: recursive top-down algorithm, PlanLater, Strategy order, complex 3-table join walkthrough, logical-to-physical node mapping
 - [project_spark_cbo_explained.md](project_spark_cbo_explained.md) — CBO: disabled by default, FilterEstimation selectivity, JoinEstimation cardinality, DP join reorder, ANALYZE TABLE, CBO vs default comparison
 - [project_spark_cbo_external_sources.md](project_spark_cbo_external_sources.md) — CBO with external sources: JDBC/Postgres/MySQL stats gaps, workarounds (save to table, hints, V2 pushdown, AQE), best practices
+- [project_spark_aqe_skew_join_handling.md](project_spark_aqe_skew_join_handling.md) — AQE skew handling: detection threshold, mapper-level splitting, replication, PartialReducerPartitionSpec, concrete country-skew example
 - [feedback_sync_repo_and_memory.md](feedback_sync_repo_and_memory.md) — Always sync memory files to ~/gitrepos/spark-internals-notes/ GitHub repo when saving
