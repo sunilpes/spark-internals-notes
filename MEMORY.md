@@ -35,5 +35,6 @@
 - [project_spark_aqe_skew_join_type_constraints.md](project_spark_aqe_skew_join_type_constraints.md) — Why AQE skew optimization can't split all join types: NULL correctness, partial data → wrong NULLs/duplicates for outer joins
 - [project_spark_skew_join_workarounds.md](project_spark_skew_join_workarounds.md) — Skew workarounds: LeftOuter+LeftAnti decomposition, key salting, separate+broadcast, increase parallelism
 - [project_spark_udf_physical_planning.md](project_spark_udf_physical_planning.md) — UDF in physical plans: Scala inlined in codegen, Python extracted to BatchEvalPythonExec/ArrowEvalPythonExec, serialization, performance
+- [project_spark_query_planning_caveats.md](project_spark_query_planning_caveats.md) — Query planning caveats: CBO off, single plan, join order, UDF pushdown, Python codegen break, no indexes, broadcast blindspot, stale stats
 - [user_role.md](user_role.md) — Engineer learning Spark internals via source code, uses IntelliJ debugger, prefers concrete examples, saves all notes to memory+GitHub
 - [feedback_sync_repo_and_memory.md](feedback_sync_repo_and_memory.md) — Always sync memory files to ~/gitrepos/spark-internals-notes/ GitHub repo when saving
