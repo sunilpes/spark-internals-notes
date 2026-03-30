@@ -2,6 +2,7 @@
 name: Spark Listener Bus
 description: How SparkListenerBus works — driver-only async event bus, event producers (DAGScheduler, TaskScheduler), consumers (SparkUI, EventLogging), routing via pattern matching
 type: project
+tags: [spark-core, spark-distributed]
 ---
 
 ## SparkListenerBus — Driver-Only Event Bus
@@ -73,3 +74,9 @@ Executors don't need lifecycle events — they just run tasks. Executor metrics 
 ### Key Source File
 
 `core/src/main/scala/org/apache/spark/scheduler/SparkListenerBus.scala`
+
+## Related Notes
+
+- [[project_spark_heartbeat_contents]] — Executor metrics forwarded to listener bus
+- [[project_spark_task_completion_tracking]] — Task/stage events posted to listener bus
+- [[project_spark_rpc_inbox_dispatcher]] — RPC system that delivers executor updates to driver

@@ -2,6 +2,7 @@
 name: Spark CBO with External Sources
 description: How to use CBO with non-Hive sources (JDBC, Postgres, MySQL, raw files) — stats availability per source, workarounds (save to table, hints, V2 JDBC pushdown, AQE), best practices
 type: project
+tags: [spark-optimization, spark-sql]
 ---
 
 ## How to Make Spark Use CBO for Different Sources
@@ -72,3 +73,10 @@ AQE discovers actual sizes after shuffle stages complete and re-optimizes. No pr
 ### TL;DR
 
 For most real-world pipelines with mixed sources, **AQE + broadcast hints** is more practical than enabling CBO. CBO shines when you have managed tables with fresh stats from ANALYZE TABLE.
+
+## Related Notes
+
+- [[project_spark_cbo_explained]] — How CBO works when stats are available
+- [[project_spark_join_strategy_selection]] — Join strategies affected by missing stats
+- [[project_spark_aqe_stats_flow]] — AQE as alternative to CBO for external sources
+- [[project_spark_query_planning_caveats]] — Limitations when CBO can't get stats

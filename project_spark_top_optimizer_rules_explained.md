@@ -2,6 +2,7 @@
 name: Spark Top Optimizer Rules Explained
 description: Top 6 most impactful Catalyst optimizer rules with before/after tree node examples — PushDownPredicates, ColumnPruning, ConstantFolding, CollapseProject, BooleanSimplification, PruneFilters
 type: project
+tags: [spark-sql, spark-optimization]
 ---
 
 ## Top 6 Most Widely Used Optimizer Rules
@@ -152,3 +153,10 @@ Project [name#10]
 ```
 
 For a simple query, most rules are no-ops. The rules really shine on **complex queries** with joins, subqueries, and many columns.
+
+## Related Notes
+
+- [[project_spark_optimizer_rule_execution]] — How these rules are picked and applied
+- [[project_spark_all_optimizer_rules]] — Complete catalog of all rules
+- [[project_spark_format_aware_optimization]] — Format-specific optimizations
+- [[project_spark_query_planning_caveats]] — When optimizer rules fall short

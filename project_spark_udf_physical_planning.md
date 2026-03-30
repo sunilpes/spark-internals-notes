@@ -2,6 +2,7 @@
 name: Spark UDF/Lambda Physical Planning
 description: How Scala and Python UDFs integrate into physical plans — Scala inlined in codegen, Python extracted to separate operators (BatchEvalPythonExec/ArrowEvalPythonExec), serialization paths, performance comparison
 type: project
+tags: [spark-execution, spark-sql]
 ---
 
 ## How Lambda/UDF Functions Get Into Physical Plans
@@ -84,3 +85,10 @@ JVM Task                          Python Worker (per partition)
 | `execution/python/BatchEvalPythonExec.scala` | Pickle-based execution |
 | `execution/python/ArrowEvalPythonExec.scala` | Arrow-based execution |
 | `execution/python/PythonUDFRunner.scala` | Python worker management |
+
+## Related Notes
+
+- [[project_spark_physical_planning_walkthrough]] — Physical planning context
+- [[project_whole_stage_codegen_explained]] — Python UDFs break codegen boundaries
+- [[project_spark_query_planning_caveats]] — UDF pushdown blocking, Python codegen breaks
+- [[project_spark_sql_planning_explained]] — Where UDF planning fits in the pipeline

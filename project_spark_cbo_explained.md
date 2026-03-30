@@ -2,6 +2,7 @@
 name: Spark Cost-Based Optimization (CBO)
 description: How CBO works in Spark — disabled by default, stats estimation (Filter/Join/Aggregate), DP join reordering, selectivity computation, cardinality estimation, ANALYZE TABLE, CBO vs default comparison
 type: project
+tags: [spark-optimization, spark-sql, spark-joins]
 ---
 
 ## Where Spark Does Cost-Based Optimization
@@ -133,3 +134,12 @@ ANALYZE TABLE users COMPUTE STATISTICS FOR COLUMNS id, name, age
 | `statsEstimation/FilterEstimation.scala` | Selectivity computation |
 | `statsEstimation/JoinEstimation.scala` | Join cardinality |
 | `optimizer/CostBasedJoinReorder.scala` | DP join reorder |
+
+## Related Notes
+
+- [[project_spark_cbo_external_sources]] — CBO with JDBC, Postgres, raw files
+- [[project_spark_join_strategy_selection]] — How CBO stats improve join strategy picks
+- [[project_spark_optimizer_rule_execution]] — CostBasedJoinReorder in the optimizer pipeline
+- [[project_spark_all_optimizer_rules]] — Where CBO rules sit in batch execution order
+- [[project_spark_aqe_stats_flow]] — AQE as runtime alternative to CBO
+- [[project_spark_query_planning_caveats]] — CBO off by default, stale stats

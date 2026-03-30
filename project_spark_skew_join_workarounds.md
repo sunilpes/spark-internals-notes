@@ -2,6 +2,7 @@
 name: Spark Skew Join Workarounds
 description: How to circumvent AQE skew limitations for FullOuter joins — split into LeftOuter+LeftAnti, salt the key, separate skewed keys + broadcast, increase parallelism, when to use which approach
 type: project
+tags: [spark-aqe, spark-joins]
 ---
 
 ## Workarounds for Skew in Unsupported Join Types (FullOuter, etc.)
@@ -83,3 +84,9 @@ Reduces impact but doesn't solve root cause.
 - **Eliminating the shuffle** (broadcast)
 - **Distributing the skew** (salting)
 - **Decomposing into supported join types** (LeftOuter + LeftAnti)
+
+## Related Notes
+
+- [[project_spark_aqe_skew_join_type_constraints]] — Why these workarounds are needed
+- [[project_spark_aqe_skew_join_handling]] — AQE skew handling for supported join types
+- [[project_spark_join_strategy_selection]] — Broadcast hint as workaround

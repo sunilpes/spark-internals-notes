@@ -1,0 +1,11 @@
+{
+  "useMarkdownLinks": false,
+  "showBacklinks": true,
+  "showLineNumber": true,
+  "strictLineBreaks": false,
+  "readableLineLength": true,
+  "defaultViewMode": "preview",
+  "foldHeading": true,
+  "foldIndent": true,
+  "showFrontmatter": false
+}

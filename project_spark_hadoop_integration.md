@@ -2,6 +2,7 @@
 name: Spark Hadoop Library Integration
 description: How Spark uses Hadoop libraries — FileSystem API for all storage, InputFormat/OutputFormat, Configuration, OutputCommitter, compression codecs, YARN, security/Kerberos, serialization, data locality
 type: project
+tags: [spark-core, spark-storage, spark-distributed]
 ---
 
 ## How Spark Uses Hadoop Libraries
@@ -178,3 +179,9 @@ Spark **does not** have its own file I/O, compression, or cluster management lay
 - Spark works on YARN clusters — it speaks YARN natively
 - Spark can read any Hadoop-compatible data format — it wraps InputFormat
 - Even on Kubernetes (non-YARN), Spark still uses Hadoop FileSystem for storage access
+
+## Related Notes
+
+- [[project_spark_file_split_partitioning]] — How Spark splits files using Hadoop FileSystem
+- [[project_spark_blockmanager_file_processing]] — When BlockManager vs Hadoop FileSystem is used
+- [[project_spark_distributed_systems_topics]] — Hadoop in distributed systems context

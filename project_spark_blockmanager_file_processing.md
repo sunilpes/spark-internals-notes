@@ -2,6 +2,7 @@
 name: BlockManager Role in File Processing
 description: When BlockManager IS and ISN'T involved — file reads (no BlockManager), shuffle blocks (disk), broadcast (memory), explicit cache, and how data flows through operators as streaming iterators
 type: project
+tags: [spark-storage, spark-core]
 ---
 
 ## BlockManager and Distributed File Processing
@@ -61,3 +62,11 @@ Step 4: RESULT (small, no BlockManager)
 - Files are already "stored" on HDFS/S3
 - Streaming iterators are efficient — constant memory
 - Cache only helps if you reuse the same DataFrame in multiple actions
+
+## Related Notes
+
+- [[project_spark_blockmanager_internals]] — BlockManager architecture for when it IS involved
+- [[project_spark_rdd_block_creation_format]] — How cached blocks are created
+- [[project_spark_memory_unrolling_explained]] — Memory materialization during caching
+- [[project_spark_hadoop_integration]] — Hadoop FileSystem used for direct file reads
+- [[project_spark_file_split_partitioning]] — How files are split before reading

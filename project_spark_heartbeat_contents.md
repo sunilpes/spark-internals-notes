@@ -2,6 +2,7 @@
 name: Spark Heartbeat Contents
 description: What a single executor heartbeat carries — executorId, per-task accumulators, blockManagerId, 20 executor metrics (JVM, GC, memory pools, process tree), and what driver does with it
 type: project
+tags: [spark-core, spark-distributed]
 ---
 
 ## Heartbeat Contents
@@ -62,3 +63,10 @@ If an executor **misses heartbeats** for `spark.network.timeout` (default 120s),
 | `core/.../HeartbeatReceiver.scala:43` | Heartbeat case class |
 | `core/.../metrics/ExecutorMetricType.scala` | 20 metric definitions |
 | `core/.../executor/ExecutorMetrics.scala` | Metrics collection |
+
+## Related Notes
+
+- [[project_spark_rpc_inbox_dispatcher]] — How heartbeat RPC messages are dispatched
+- [[project_spark_rpc_message_format]] — Heartbeat case class wire format
+- [[project_spark_task_completion_tracking]] — Task-level tracking complementing heartbeats
+- [[project_spark_listener_bus]] — Heartbeat metrics forwarded to listener bus

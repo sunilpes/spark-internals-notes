@@ -2,6 +2,7 @@
 name: Spark SQL Planning Explained From Scratch
 description: Complete walkthrough of how Spark SQL planning works — TreeNode hierarchy, Logical vs Physical plans, LeafNode/UnaryNode/BinaryNode, QueryExecution pipeline, Strategies, and recursive planning algorithm with source code references
 type: project
+tags: [spark-sql, spark-execution]
 ---
 
 ## How Spark SQL Planning Works — From Scratch
@@ -362,3 +363,12 @@ WholeStageCodegenExec                  <- codegen wrapper
 ```
 
 The key insight: **the tree shape is preserved**. A unary logical node becomes a unary physical node. A binary Join becomes a binary BroadcastHashJoinExec or SortMergeJoinExec. The planning step translates each node while keeping the same parent-child relationships.
+
+## Related Notes
+
+- [[project_spark_sql_parsing_explained]] — Previous step: SQL string to unresolved LogicalPlan
+- [[project_spark_optimizer_rule_execution]] — Optimizer transforms analyzed plan
+- [[project_spark_physical_planning_walkthrough]] — Deeper dive into physical planning
+- [[project_whole_stage_codegen_explained]] — Next step: codegen wraps the physical plan
+- [[project_spark_sql_architecture]] — Overall architecture context
+- [[spark-sql-planning-classes]] — Class diagram of TreeNode/QueryPlan hierarchy

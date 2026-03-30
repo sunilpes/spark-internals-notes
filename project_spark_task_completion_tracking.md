@@ -2,6 +2,7 @@
 name: Spark Task and Job Completion Tracking
 description: How Spark tracks task progress and marks stages/jobs complete — StatusUpdate flow, TaskSetManager counters, DAGScheduler stage tracking, JobWaiter notification, child stage triggering
 type: project
+tags: [spark-core, spark-distributed]
 ---
 
 ## How Spark Tracks Task Progress and Marks Completion
@@ -172,3 +173,11 @@ LAUNCHING → RUNNING → FINISHED (success)
 | markStageAsFinished | DAGScheduler.scala | 3236 |
 | JobWaiter | JobWaiter.scala | 30-79 |
 | ActiveJob | ActiveJob.scala | 45-66 |
+
+## Related Notes
+
+- [[project_spark_rpc_inbox_dispatcher]] — StatusUpdate RPC flow from executor to driver
+- [[project_spark_rpc_message_format]] — StatusUpdate message format
+- [[project_spark_heartbeat_contents]] — Periodic health checks between status updates
+- [[project_spark_listener_bus]] — Events posted when tasks/stages/jobs complete
+- [[project_spark_aqe_stats_flow]] — MapStatus sent to driver triggers AQE re-optimization

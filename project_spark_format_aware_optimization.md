@@ -2,6 +2,7 @@
 name: Spark Format-Aware Optimization Rules
 description: How Spark applies optimizations based on file format — partition pruning, predicate pushdown to row groups/stripes, column pruning, aggregate pushdown, bucket pruning, V2 push-down interfaces, per-format capability matrix
 type: project
+tags: [spark-optimization, spark-storage, spark-sql]
 ---
 
 ## Format-Aware Optimization Rules in Query Planning
@@ -113,3 +114,11 @@ Seq(
 | OrcFilters | `sql/core/.../datasources/orc/OrcFilters.scala` |
 | ParquetScanBuilder | `sql/core/.../datasources/v2/parquet/ParquetScanBuilder.scala` |
 | SparkOptimizer | `sql/core/.../execution/SparkOptimizer.scala` |
+
+## Related Notes
+
+- [[project_spark_optimizer_rule_execution]] — How these rules are applied within the optimizer
+- [[project_spark_all_optimizer_rules]] — Complete rule catalog including format-aware rules
+- [[project_spark_parquet_count_optimization]] — Deep dive on aggregate pushdown for Parquet
+- [[project_spark_cbo_explained]] — CBO interacts with format-aware stats
+- [[project_spark_query_planning_caveats]] — Limitations of format-aware optimizations

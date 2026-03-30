@@ -2,6 +2,7 @@
 name: Spark AQE Stats Collection Flow
 description: How AQE gets shuffle statistics from executors to driver — MapStatus, MapOutputTracker, MapOutputStatistics, re-optimization flow, and what AQE decides based on runtime stats
 type: project
+tags: [spark-aqe, spark-execution]
 ---
 
 ## How AQE Gets Shuffle Stats from Executors to Driver
@@ -153,3 +154,10 @@ The data itself stays on executors. Only **metadata about sizes** flows to the d
 | ShuffleQueryStageExec.mapStats | `sql/core/.../adaptive/QueryStageExec.scala` | 231-235 |
 | AdaptiveSparkPlanExec | `sql/core/.../adaptive/AdaptiveSparkPlanExec.scala` | 268-384 |
 | reOptimize | `sql/core/.../adaptive/AdaptiveSparkPlanExec.scala` | 793-823 |
+
+## Related Notes
+
+- [[project_spark_aqe_stage_splitting]] — How stages are split and re-optimized with these stats
+- [[project_spark_aqe_skew_join_handling]] — Skew detection uses these partition size stats
+- [[project_spark_join_strategy_selection]] — AQE overrides initial join strategy using runtime stats
+- [[project_spark_task_completion_tracking]] — StatusUpdate/MapStatus flows from executor to driver

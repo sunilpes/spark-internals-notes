@@ -2,6 +2,7 @@
 name: Streaming dropDuplicates Internals
 description: How dropDuplicates works in Spark Structured Streaming — stateful (state store) path vs batch (foreachBatch) path, key source files, and execution flow
 type: project
+tags: [spark-sql, spark-execution]
 ---
 
 ## Streaming `dropDuplicates` — Two Distinct Code Paths
@@ -54,3 +55,9 @@ When `dropDuplicates` is called on the batch DataFrame inside `foreachBatch`, `c
 | Within-batch dedup | Yes | Yes |
 | State growth | Unbounded without watermark | None |
 | Surviving row | First encountered in partition | Non-deterministic (First()) |
+
+## Related Notes
+
+- [[project_spark_sql_architecture]] — Query execution pipeline context
+- [[project_sparksession_internals]] — StreamingQueryManager lives in SessionState
+- [[project_spark_sql_planning_explained]] — How Deduplicate becomes StreamingDeduplicateExec

@@ -2,6 +2,7 @@
 name: Spark File Split and Partitioning
 description: How Spark splits large files into partitions for executors — maxSplitBytes calculation, PartitionedFile splitting, bin-packing algorithm, configs, and end-to-end flow
 type: project
+tags: [spark-core, spark-storage]
 ---
 
 ## How Spark Splits Large Files for Distribution
@@ -117,3 +118,9 @@ Bin-pack (sorted desc, with 4MB open cost):
 - **Bucketed tables**: Files grouped by bucket ID, bypasses bin-packing
 - **HDFS locality**: Each `PartitionedFile` carries block host info so tasks prefer nodes where data lives
 - **Hadoop RDD path** (older API): Delegates to `InputFormat.getSplits()` which typically splits at HDFS block boundaries (128/256 MB)
+
+## Related Notes
+
+- [[project_spark_hadoop_integration]] — Hadoop FileSystem API used for file listing
+- [[project_spark_blockmanager_file_processing]] — When BlockManager is/isn't involved in file reads
+- [[project_spark_format_aware_optimization]] — Format-aware optimizations during scan

@@ -2,6 +2,7 @@
 name: Spark SQL Core Architecture
 description: Key classes, inheritance hierarchies, and query execution pipeline in Spark SQL core and catalyst modules
 type: project
+tags: [spark-sql, spark-execution]
 ---
 
 ## Spark SQL Core — Architecture Overview
@@ -51,3 +52,12 @@ TreeNode[T]  (catalyst/trees)
 **Why:** Understanding these relationships is essential for navigating the codebase when debugging query planning, adding new optimizations, or tracing how a user query becomes an RDD execution.
 
 **How to apply:** Use this as a map when the user asks about query execution flow, plan transformations, or where to find specific Spark SQL components.
+
+## Related Notes
+
+- [[project_sparksession_internals]] — SparkSession holds the query execution pipeline
+- [[project_spark_sql_parsing_explained]] — First step: SQL string to LogicalPlan
+- [[project_spark_sql_planning_explained]] — TreeNode hierarchy and planning pipeline
+- [[project_spark_optimizer_rule_execution]] — How optimizer rules transform the plan
+- [[project_whole_stage_codegen_explained]] — Final execution via codegen
+- [[spark-sql-planning-classes]] — Class diagram of the plan hierarchy

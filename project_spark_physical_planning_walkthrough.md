@@ -2,6 +2,7 @@
 name: Spark Physical Planning Walkthrough
 description: How physical plans are prepared from optimized logical plans — recursive top-down algorithm, PlanLater placeholders, Strategy priority order, complex 3-table join example, logical-to-physical node mapping
 type: project
+tags: [spark-sql, spark-execution]
 ---
 
 ## How Physical Plans Are Prepared
@@ -168,3 +169,11 @@ case Join(left, right, Inner, condition, _) =>
 | `SparkPlanner.scala:38` | Strategy list and order |
 | `SparkStrategies.scala` | All strategy implementations (JoinSelection, Aggregation, etc.) |
 | `FileSourceStrategy.scala` | File scan physical planning |
+
+## Related Notes
+
+- [[project_spark_sql_planning_explained]] — Overview of planning pipeline
+- [[project_whole_stage_codegen_explained]] — Codegen wraps the physical plan
+- [[project_spark_join_strategy_selection]] — JoinSelection strategy in detail
+- [[project_spark_optimizer_rule_execution]] — Optimizer that produces the input to planning
+- [[project_spark_udf_physical_planning]] — How UDFs affect physical plan structure

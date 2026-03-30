@@ -2,6 +2,7 @@
 name: Spark RDD Block Creation and Storage Format
 description: How RDD blocks are created lazily, what they look like in memory (DeserializedMemoryEntry vs SerializedMemoryEntry) and on disk (file layout, serialization), StorageLevel options, spill/eviction
 type: project
+tags: [spark-storage, spark-core]
 ---
 
 ## How RDD Blocks Are Created and What They Look Like
@@ -153,3 +154,9 @@ MEMORY_AND_DISK:
 | DiskStore put | DiskStore.scala | 64-115 |
 | File paths | DiskBlockManager.scala | 95-128 |
 | StorageLevel | StorageLevel.scala | 39-44, 148-162 |
+
+## Related Notes
+
+- [[project_spark_blockmanager_internals]] — BlockManager that stores these blocks
+- [[project_spark_memory_unrolling_explained]] — How blocks are gradually materialized
+- [[project_spark_blockmanager_file_processing]] — When BlockManager creates blocks vs streaming

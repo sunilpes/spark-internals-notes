@@ -2,6 +2,7 @@
 name: SparkSession Internals
 description: Complete breakdown of SparkSession — constructor params, SharedState, SessionState, and user-facing APIs with types and purposes
 type: project
+tags: [spark-sql, spark-core]
 ---
 
 # SparkSession — What's Inside
@@ -89,3 +90,10 @@ SparkSession
 ```
 
 The key insight: `SharedState` holds things that are **expensive and shared** (metastore connection, cache), while `SessionState` holds things that are **per-session and isolated** (configs, temp views, the full query compilation pipeline).
+
+## Related Notes
+
+- [[project_spark_sql_architecture]] — How SparkSession fits in the overall architecture
+- [[project_spark_sql_parsing_explained]] — sqlParser in SessionState
+- [[project_spark_optimizer_rule_execution]] — optimizer in SessionState
+- [[project_spark_sql_planning_explained]] — planner in SessionState

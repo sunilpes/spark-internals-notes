@@ -2,6 +2,7 @@
 name: Spark SQL Parsing Explained
 description: Complete walkthrough of how SQL string becomes a LogicalPlan — ANTLR grammar, Lexer, Parser, AstBuilder, UnresolvedRelation, and the parse tree to LogicalPlan conversion with source file references
 type: project
+tags: [spark-sql]
 ---
 
 ## How Spark SQL Parsing Works — From SQL String to LogicalPlan
@@ -245,3 +246,11 @@ A Mermaid class diagram is saved separately at:
 `spark-sql-planning-classes.mmd` (in this same memory directory)
 
 It shows: TreeNode -> QueryPlan -> LogicalPlan/SparkPlan -> LeafNode/UnaryNode/BinaryNode -> concrete operators, and how Strategy classes bridge logical to physical nodes.
+
+## Related Notes
+
+- [[project_spark_sql_planning_explained]] — Next step: planning the parsed LogicalPlan
+- [[project_spark_optimizer_rule_execution]] — Optimizer rules applied after analysis
+- [[project_spark_sql_architecture]] — Where parsing fits in the pipeline
+- [[project_sparksession_internals]] — sqlParser lives in SessionState
+- [[spark-sql-planning-classes]] — Class diagram referenced in this note

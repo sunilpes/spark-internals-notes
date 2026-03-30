@@ -2,6 +2,7 @@
 name: Distributed Systems Topics for Spark
 description: Key distributed systems topics to learn for understanding Spark codebase — RPC, scheduling, shuffle, fault tolerance, memory management, with learning order and resources
 type: project
+tags: [spark-distributed, spark-core]
 ---
 
 ## Core Distributed Systems Concepts for Spark
@@ -81,3 +82,13 @@ Phase 4: Advanced (optimization)
 
 Already covered: RPC, Catalyst optimizer, AQE, join strategies, file splitting, Hadoop integration
 Remaining gaps: **scheduling**, **shuffle internals**, **memory management** — these three would give the deepest understanding of Spark's runtime behavior.
+
+## Related Notes
+
+- [[project_spark_rpc_inbox_dispatcher]] — RPC internals (Topic 1)
+- [[project_spark_rpc_message_format]] — RPC message format (Topic 1)
+- [[project_spark_blockmanager_internals]] — Distributed storage and caching (Topic 6)
+- [[project_spark_heartbeat_contents]] — Consensus and coordination (Topic 7)
+- [[project_spark_task_completion_tracking]] — Scheduling and task distribution (Topic 2)
+- [[project_spark_aqe_skew_join_handling]] — Partitioning and skew handling (Topic 8)
+- [[project_spark_hadoop_integration]] — Infrastructure layer

@@ -2,6 +2,7 @@
 name: Spark Optimizer Rule Execution
 description: How Catalyst optimizer picks and applies rules — batch ordering, fixed-point loop, pattern matching, RuleExecutor.execute() walkthrough, and concrete example with SELECT query
 type: project
+tags: [spark-sql, spark-optimization]
 ---
 
 ## How Optimizer Rules Are Picked and Applied
@@ -147,3 +148,12 @@ Optimizer.execute(analyzedPlan)
 | `Once` | Run all rules exactly once |
 | `FixedPoint(1)` | Run once, same as Once but with idempotence check |
 | `fixedPoint` | Loop until plan stops changing or 100 iterations (`spark.sql.optimizer.maxIterations`) |
+
+## Related Notes
+
+- [[project_spark_top_optimizer_rules_explained]] — Detailed look at top 6 rules
+- [[project_spark_all_optimizer_rules]] — Complete catalog of 80+ rules
+- [[project_spark_format_aware_optimization]] — Format-specific optimization rules
+- [[project_spark_cbo_explained]] — Cost-based optimization rules
+- [[project_spark_query_planning_caveats]] — Optimizer limitations and pitfalls
+- [[project_spark_sql_planning_explained]] — Planning pipeline where optimizer sits

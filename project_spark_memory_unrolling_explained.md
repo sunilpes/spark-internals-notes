@@ -2,6 +2,7 @@
 name: Spark Memory Unrolling Process Explained
 description: How Spark gradually materializes an iterator into memory (unrolling), periodic memory checks, what happens when memory is full — MEMORY_ONLY vs MEMORY_AND_DISK fallback, with concrete step-by-step example
 type: project
+tags: [spark-storage, spark-core]
 ---
 
 ## What is "Unrolling"?
@@ -105,3 +106,9 @@ Spark never blindly loads an entire partition into memory. It's a **gradual, mem
 ### Key Source Location
 
 `MemoryStore.scala:230-296` — the unrolling while loop with periodic memory checks
+
+## Related Notes
+
+- [[project_spark_blockmanager_internals]] — BlockManager that triggers unrolling
+- [[project_spark_rdd_block_creation_format]] — Block formats after successful unrolling
+- [[project_spark_blockmanager_file_processing]] — When unrolling happens vs streaming

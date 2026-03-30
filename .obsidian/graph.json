@@ -1,0 +1,53 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#spark-sql",
+      "color": { "a": 1, "rgb": 4488191 }
+    },
+    {
+      "query": "tag:#spark-core",
+      "color": { "a": 1, "rgb": 16744448 }
+    },
+    {
+      "query": "tag:#spark-storage",
+      "color": { "a": 1, "rgb": 8388352 }
+    },
+    {
+      "query": "tag:#spark-aqe",
+      "color": { "a": 1, "rgb": 16711935 }
+    },
+    {
+      "query": "tag:#spark-joins",
+      "color": { "a": 1, "rgb": 16776960 }
+    },
+    {
+      "query": "tag:#spark-optimization",
+      "color": { "a": 1, "rgb": 65535 }
+    },
+    {
+      "query": "tag:#spark-distributed",
+      "color": { "a": 1, "rgb": 16724736 }
+    },
+    {
+      "query": "tag:#spark-execution",
+      "color": { "a": 1, "rgb": 10092543 }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.5,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250
+}

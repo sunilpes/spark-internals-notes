@@ -2,6 +2,7 @@
 name: Spark 5-Week Learning Plan
 description: Structured 5-week plan to learn Spark internals — core/scheduler/shuffle, catalyst deep dive, physical execution, data sources/streaming, networking/storage/tuning
 type: project
+tags: [spark-core, spark-sql]
 ---
 
 ## 5-Week Spark Internals Learning Plan
@@ -69,3 +70,10 @@ type: project
 2. Set breakpoints in IntelliJ and trace a simple query
 3. Use `df.queryExecution.analyzed/optimizedPlan/executedPlan.treeString` to inspect each stage
 4. Ask Claude to explain each topic with a simple example walkthrough
+
+## Related Notes
+
+- [[project_spark_sql_architecture]] — Architecture overview for Week 2
+- [[project_spark_distributed_systems_topics]] — Distributed systems context for Week 1
+- [[project_spark_blockmanager_internals]] — BlockManager for Week 5
+- [[project_sparksession_internals]] — SparkSession for Week 5

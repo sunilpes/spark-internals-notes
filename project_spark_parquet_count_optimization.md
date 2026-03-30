@@ -2,6 +2,7 @@
 name: Spark Parquet Count Optimization
 description: Why count() reads full file by default, aggregate pushdown to Parquet footer metadata (disabled by default), how to enable it, catalog stats via ANALYZE TABLE
 type: project
+tags: [spark-optimization, spark-storage]
 ---
 
 ## Why count() Reads the Whole Parquet File by Default
@@ -63,3 +64,9 @@ Then catalog has the row count — Spark can use it without reading files at all
 | `count()` with pushdown | No, footer only | `spark.sql.parquet.aggregatePushdown=true` |
 | `count()` on analyzed table | No, catalog stats | `ANALYZE TABLE` was run |
 | `count()` with filter | Yes, must read data | Filter needs row-level evaluation |
+
+## Related Notes
+
+- [[project_spark_format_aware_optimization]] — Aggregate pushdown is one of several format-aware optimizations
+- [[project_spark_cbo_explained]] — ANALYZE TABLE provides catalog stats as alternative to footer stats
+- [[project_spark_all_optimizer_rules]] — Where aggregate pushdown sits in the rule catalog

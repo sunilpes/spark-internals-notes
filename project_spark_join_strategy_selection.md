@@ -2,6 +2,7 @@
 name: Spark Join Strategy Selection
 description: How Spark selects join strategies (BroadcastHash, SortMerge, ShuffledHash) based on data statistics — stats collection, size thresholds, JoinSelection logic, priority order, hints, AQE re-planning
 type: project
+tags: [spark-sql, spark-joins, spark-optimization]
 ---
 
 ## How Spark Selects Join Strategies Based on Data Statistics
@@ -148,3 +149,12 @@ At runtime, after shuffle stages complete, AQE knows the **actual data sizes** (
 | JoinSelectionHelper | `catalyst/.../optimizer/joins.scala` | 290-562 |
 | canBroadcastBySize | `catalyst/.../optimizer/joins.scala` | 367-375 |
 | File size collection | `sql/core/.../datasources/PartitioningAwareFileIndex.scala` | 117 |
+
+## Related Notes
+
+- [[project_spark_cbo_explained]] — How CBO improves join strategy decisions
+- [[project_spark_cbo_external_sources]] — CBO limitations with external data sources
+- [[project_spark_aqe_skew_join_handling]] — AQE handles skewed joins at runtime
+- [[project_spark_aqe_stats_flow]] — Runtime stats that enable AQE re-planning
+- [[project_spark_physical_planning_walkthrough]] — Where JoinSelection fits in planning
+- [[project_spark_query_planning_caveats]] — Broadcast threshold blindspots

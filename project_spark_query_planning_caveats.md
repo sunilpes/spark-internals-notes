@@ -2,6 +2,7 @@
 name: Spark Query Planning Caveats
 description: Key limitations and pitfalls of Spark's query planning — CBO off by default, single plan selection, join order, UDF pushdown blocking, Python codegen breaks, no indexes, broadcast threshold blindspot, stale stats, AQE limits
 type: project
+tags: [spark-sql, spark-optimization, spark-aqe]
 ---
 
 ## Spark Query Planning Caveats
@@ -65,3 +66,13 @@ No automatic stats refresh. Old ANALYZE TABLE stats → terrible CBO decisions o
 | Broadcast threshold = disk size | OOM on decompression | Conservative threshold |
 | Stale statistics | Wrong decisions | Re-run ANALYZE or use AQE |
 | AQE only at shuffle boundaries | First stage unoptimized | Accurate initial stats |
+
+## Related Notes
+
+- [[project_spark_cbo_explained]] — CBO off by default (Caveat 1)
+- [[project_spark_optimizer_rule_execution]] — Rule conflicts (Caveat 7)
+- [[project_spark_udf_physical_planning]] — UDF pushdown blocking, codegen breaks (Caveats 4, 6)
+- [[project_whole_stage_codegen_explained]] — Codegen fallbacks (Caveat 6)
+- [[project_spark_aqe_stats_flow]] — AQE limitations at shuffle boundaries (Caveat 8)
+- [[project_spark_join_strategy_selection]] — Broadcast threshold blindspot (Caveat 9)
+- [[project_spark_format_aware_optimization]] — Format-aware mitigations for full scans

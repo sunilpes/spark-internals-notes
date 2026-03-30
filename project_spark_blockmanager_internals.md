@@ -2,6 +2,7 @@
 name: Spark BlockManager Internals
 description: BlockManager architecture — MemoryStore, DiskStore, BlockInfoManager, BlockManagerMaster, read/write/spill flows, block types, locking, replication, driver vs executor roles
 type: project
+tags: [spark-storage, spark-core]
 ---
 
 ## BlockManager — Spark's Distributed Storage Engine
@@ -158,3 +159,10 @@ Executor-1 stores block locally
 | BlockManagerMaster | `core/.../storage/BlockManagerMaster.scala` |
 | BlockManagerMasterEndpoint | `core/.../storage/BlockManagerMasterEndpoint.scala` |
 | BlockId types | `core/.../storage/BlockId.scala` |
+
+## Related Notes
+
+- [[project_spark_rdd_block_creation_format]] — How RDD blocks are created and stored
+- [[project_spark_memory_unrolling_explained]] — How data is gradually materialized into MemoryStore
+- [[project_spark_blockmanager_file_processing]] — When BlockManager is/isn't involved
+- [[project_spark_distributed_systems_topics]] — BlockManager in distributed storage context

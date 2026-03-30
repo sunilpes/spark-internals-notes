@@ -2,6 +2,7 @@
 name: AQE Skew Join Type Constraints
 description: Why AQE skew optimization doesn't support all join types — correctness constraints around NULL generation, partial data producing wrong NULLs and duplicates for outer joins, with concrete examples
 type: project
+tags: [spark-aqe, spark-joins]
 ---
 
 ## Why AQE Skew Optimization Doesn't Support All Join Types
@@ -65,3 +66,9 @@ Cannot split side X if:
 | LeftSemi | Yes | No | Need full right to confirm "any match exists" |
 | LeftAnti | Yes | No | Need full right to confirm "no match exists" |
 | FullOuter | No | No | Both sides need full other for correct NULLs |
+
+## Related Notes
+
+- [[project_spark_aqe_skew_join_handling]] — How skew splitting works for supported types
+- [[project_spark_skew_join_workarounds]] — What to do for unsupported types (FullOuter)
+- [[project_spark_aqe_stage_splitting]] — AQE re-optimization context

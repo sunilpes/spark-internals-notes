@@ -2,6 +2,7 @@
 name: WholeStageCodegenExec Explained
 description: How WholeStageCodegenExec works — the produce/consume protocol, how operators contribute Java code, InputAdapter boundaries, CollapseCodegenStages rule, and generated Java code examples with source file references
 type: project
+tags: [spark-sql, spark-execution]
 ---
 
 ## What WholeStageCodegenExec Actually Does
@@ -268,3 +269,10 @@ So `WholeStageCodegenExec` doesn't "have" the plan -- it **compiles its subtree*
 | ProjectExec codegen | basicPhysicalOperators.scala | 54-80 |
 | FilterExec codegen | basicPhysicalOperators.scala | 249-276 |
 | CodegenContext | CodeGenerator.scala | 137+ |
+
+## Related Notes
+
+- [[project_spark_physical_planning_walkthrough]] — Physical plan that codegen wraps
+- [[project_spark_sql_planning_explained]] — How the physical plan was created
+- [[project_spark_udf_physical_planning]] — Python UDFs break codegen boundaries
+- [[project_spark_query_planning_caveats]] — Codegen limitations and fallbacks

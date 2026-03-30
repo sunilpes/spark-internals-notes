@@ -2,6 +2,7 @@
 name: Spark RPC Message Format
 description: Wire format of Spark Netty RPC messages — RequestMessage structure, serialization, actual case class messages (LaunchTask, StatusUpdate, Heartbeat), and concrete flow example
 type: project
+tags: [spark-core, spark-distributed]
 ---
 
 ## RPC Message Format
@@ -115,3 +116,9 @@ case class RpcOutboxMessage(
 ```
 
 All messages extend `CoarseGrainedClusterMessage` which is just a sealed trait — the actual data is in the case class fields, serialized via Java serialization.
+
+## Related Notes
+
+- [[project_spark_rpc_inbox_dispatcher]] — How messages are dispatched after deserialization
+- [[project_spark_heartbeat_contents]] — Heartbeat message structure
+- [[project_spark_task_completion_tracking]] — StatusUpdate and LaunchTask message flows

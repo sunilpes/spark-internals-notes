@@ -2,6 +2,7 @@
 name: Spark AQE Skew Join Handling
 description: How AQE detects and handles skewed partitions — detection threshold, mapper-level splitting, replication of non-skewed side, PartialReducerPartitionSpec, Cartesian product for both-sides skew, concrete example with country skew
 type: project
+tags: [spark-aqe, spark-joins]
 ---
 
 ## How AQE Handles Skewed Partitions
@@ -120,3 +121,11 @@ Non-skewed side replicated by creating **multiple specs pointing to same partiti
 | `adaptive/ShufflePartitionsUtil.scala:398` | `createSkewPartitionSpecs()` mapper-level splitting |
 | `adaptive/AQEShuffleReadExec.scala` | Executes rearranged partition specs |
 | `ShuffledRowRDD.scala:48` | `PartialReducerPartitionSpec` |
+
+## Related Notes
+
+- [[project_spark_aqe_skew_join_type_constraints]] — Why not all join types support skew splitting
+- [[project_spark_skew_join_workarounds]] — Workarounds for unsupported join types
+- [[project_spark_aqe_stats_flow]] — Shuffle stats that enable skew detection
+- [[project_spark_aqe_stage_splitting]] — AQE stage lifecycle where skew is detected
+- [[project_spark_join_strategy_selection]] — Initial join strategy before AQE

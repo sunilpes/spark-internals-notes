@@ -2,6 +2,7 @@
 name: Spark AQE Stage Splitting and Re-optimization
 description: How AQE splits physical plan into stages at Exchange boundaries, the submit-wait-reoptimize loop, LogicalQueryStage with runtime stats, and concrete walkthrough of join strategy change at runtime
 type: project
+tags: [spark-aqe, spark-execution]
 ---
 
 ## How the Plan is Split into Stages and Which Parts AQE Re-optimizes
@@ -206,3 +207,10 @@ JoinSelection now sees 3MB → picks BroadcastHashJoin!
 | ShuffleQueryStageExec | `QueryStageExec.scala` | 198-238 |
 | LogicalQueryStage | `LogicalQueryStage.scala` | 38-113 |
 | AQEOptimizer | `AQEOptimizer.scala` | 39-47 |
+
+## Related Notes
+
+- [[project_spark_aqe_stats_flow]] — How shuffle stats arrive from executors
+- [[project_spark_aqe_skew_join_handling]] — Skew optimization within AQE stages
+- [[project_spark_join_strategy_selection]] — Join strategy that AQE can change at runtime
+- [[project_spark_aqe_skew_join_type_constraints]] — Why not all join types can be skew-optimized

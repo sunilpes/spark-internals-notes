@@ -2,6 +2,7 @@
 name: Complete Spark Optimizer Rules Catalog
 description: All 80+ Catalyst optimizer rules organized by category — push down, combine, eliminate, column pruning, constant folding, filter, join, subquery, set ops, aggregate, local relation, window, and Spark-specific rules with batch execution order
 type: project
+tags: [spark-sql, spark-optimization]
 ---
 
 ## All Optimizer Rules — Location and What They Do
@@ -193,3 +194,11 @@ type: project
 ```
 
 ~80+ distinct rules across ~27 batches.
+
+## Related Notes
+
+- [[project_spark_optimizer_rule_execution]] — How rules are picked and applied (batch/fixed-point)
+- [[project_spark_top_optimizer_rules_explained]] — Deep dive on top 6 rules
+- [[project_spark_format_aware_optimization]] — Format-specific rules in SparkOptimizer
+- [[project_spark_cbo_explained]] — CostBasedJoinReorder rule
+- [[project_spark_query_planning_caveats]] — Limitations and conflicts between rules

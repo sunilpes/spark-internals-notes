@@ -2,6 +2,7 @@
 name: Spark RPC Inbox and Dispatcher Flow
 description: How Spark's Netty RPC system processes messages — Dispatcher, MessageLoop, Inbox, thread pools, and end-to-end flow from network to RpcEndpoint
 type: project
+tags: [spark-core, spark-distributed]
 ---
 
 ## Who Processes Inbox Messages — The Complete Flow
@@ -117,3 +118,10 @@ Say an executor sends a `StatusUpdate` to the driver:
 ### Outbox (sending side)
 
 `Outbox.scala` handles the **reverse direction** — buffering outbound messages until a network connection is established. Each remote address gets one `Outbox`. It's not involved in receiving/processing.
+
+## Related Notes
+
+- [[project_spark_rpc_message_format]] — Wire format of messages processed by Inbox
+- [[project_spark_heartbeat_contents]] — Heartbeat messages flow through this RPC system
+- [[project_spark_task_completion_tracking]] — StatusUpdate messages flow through Dispatcher
+- [[project_spark_distributed_systems_topics]] — RPC in broader distributed systems context
