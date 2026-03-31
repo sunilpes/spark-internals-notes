@@ -38,6 +38,7 @@
 - [project_spark_query_planning_caveats.md](project_spark_query_planning_caveats.md) — Query planning caveats: CBO off, single plan, join order, UDF pushdown, Python codegen break, no indexes, broadcast blindspot, stale stats
 - [project_spark_ast_tree_building.md](project_spark_ast_tree_building.md) — How AST trees are built: ANTLR parse tree → AstBuilder visitor → LogicalPlan bottom-up, node creation, Unresolved* pattern
 - [project_spark_no_consensus_algo.md](project_spark_no_consensus_algo.md) — Spark has no Raft/Paxos — single driver, no leader election, consensus only in surrounding infra (YARN/HDFS/ZK)
+- [project_spark_executor_threading.md](project_spark_executor_threading.md) — Executor threading: CachedThreadPool, TaskRunner, all thread types, shared resources, concurrency patterns, memory sharing
 - [user_role.md](user_role.md) — Engineer learning Spark internals via source code, uses IntelliJ debugger, prefers concrete examples, saves all notes to memory+GitHub
 - [reference_obsidian_vault.md](reference_obsidian_vault.md) — Obsidian vault at ~/gitrepos/spark-internals-notes/ with wiki-links, tags, graph view, _MOC.md entry point
 - [feedback_sync_repo_and_memory.md](feedback_sync_repo_and_memory.md) — Always sync memory files to ~/gitrepos/spark-internals-notes/ GitHub repo when saving

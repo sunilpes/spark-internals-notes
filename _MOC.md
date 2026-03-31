@@ -71,6 +71,7 @@ The complete journey of a SQL query through Spark:
 - [[project_spark_heartbeat_contents]] -- Executor heartbeat: metrics, accumulators
 - [[project_spark_task_completion_tracking]] -- Task/stage/job completion flow
 - [[project_spark_listener_bus]] -- Driver-only async event bus
+- [[project_spark_executor_threading]] -- Executor multithreading: thread pool, TaskRunner, concurrency patterns
 
 ## Distributed Systems
 
