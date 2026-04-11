@@ -1,6 +1,7 @@
 ---
+
 name: Executor OOM Death Recovery Flow
-description: Complete workflow when executor dies from OOM: JVM exit, driver detection via RPC disconnect, TaskSetManager re-queuing (no failure count), shuffle output loss, FetchFailed, stage resubmission, external shuffle service difference
+description: "Complete workflow when executor dies from OOM: JVM exit, driver detection via RPC disconnect, TaskSetManager re-queuing (no failure count), shuffle output loss, FetchFailed, stage resubmission, external shuffle service difference"
 type: project
 tags: [spark, fault-tolerance, executor, oom, scheduler, shuffle, recovery]
 ---

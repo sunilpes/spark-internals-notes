@@ -2,6 +2,7 @@
 name: Spark and Consensus Algorithms
 description: Spark does NOT use Raft/Paxos — single driver architecture, no leader election needed, driver dies = app fails, consensus only in surrounding infra (YARN/HDFS/ZK)
 type: project
+tags: [spark, distributed-systems, consensus, fault-tolerance]
 ---
 
 #spark-core #spark-distributed

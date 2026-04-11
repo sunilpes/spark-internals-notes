@@ -1,6 +1,7 @@
 ---
+
 name: External Shuffle Service Architecture and Network Impact
-description: How ESS works: separate JVM process, executor registration, shuffle file layout, block fetch flow, Netty zero-copy, index caching, network latency sources, single-process bottleneck, tradeoffs vs direct executor serving
+description: "How ESS works: separate JVM process, executor registration, shuffle file layout, block fetch flow, Netty zero-copy, index caching, network latency sources, single-process bottleneck, tradeoffs vs direct executor serving"
 type: project
 tags: [spark, shuffle, external-shuffle-service, network, latency, fault-tolerance]
 ---

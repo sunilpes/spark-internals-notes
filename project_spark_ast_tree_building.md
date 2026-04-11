@@ -1,7 +1,9 @@
 ---
+
 name: Spark AST Tree Building
-description: How AST trees are built — two stages: ANTLR parse tree from grammar, then AstBuilder visitor converts to LogicalPlan bottom-up, with concrete SQL examples showing node creation
+description: "How AST trees are built — two stages: ANTLR parse tree from grammar, then AstBuilder visitor converts to LogicalPlan bottom-up, with concrete SQL examples showing node creation"
 type: project
+tags: [spark, spark-sql, parsing, antlr, ast, catalyst]
 ---
 
 #spark-sql #spark-optimization

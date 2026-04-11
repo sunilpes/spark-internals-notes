@@ -1,6 +1,7 @@
 ---
+
 name: OutputCommitCoordinator Atomic Commit Protocol
-description: How OutputCommitCoordinator ensures atomic output writes: first-committer-wins policy, two-phase commit (task+job), speculative/retry/zombie handling, StageState tracking, RPC coordination, HadoopMapReduceCommitProtocol integration
+description: "How OutputCommitCoordinator ensures atomic output writes: first-committer-wins policy, two-phase commit (task+job), speculative/retry/zombie handling, StageState tracking, RPC coordination, HadoopMapReduceCommitProtocol integration"
 type: project
 tags: [spark, output-commit, atomicity, speculation, fault-tolerance, hdfs]
 ---

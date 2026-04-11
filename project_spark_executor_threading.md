@@ -2,6 +2,7 @@
 name: Spark Executor Multithreading
 description: How multithreading works inside executor — CachedThreadPool for tasks, TaskRunner lifecycle, all thread types (heartbeat, metrics, reaper, RPC, shuffle), shared resources, thread safety patterns, memory sharing
 type: project
+tags: [spark, executor, threading, concurrency, task-execution]
 ---
 
 #spark-core #spark-execution #spark-distributed

@@ -1,6 +1,7 @@
 ---
+
 name: Spark Runtime Managers and Their Roles
-description: Roles of all key runtime managers: CoarseGrainedSchedulerBackend, CoarseGrainedExecutorBackend, TaskSchedulerImpl, TaskSetManager, BlockManager, BlockManagerMaster, DiskBlockManager, MemoryManager, MapOutputTracker, ShuffleManager, OutputCommitCoordinator, SparkEnv as container
+description: "Roles of all key runtime managers: CoarseGrainedSchedulerBackend, CoarseGrainedExecutorBackend, TaskSchedulerImpl, TaskSetManager, BlockManager, BlockManagerMaster, DiskBlockManager, MemoryManager, MapOutputTracker, ShuffleManager, OutputCommitCoordinator, SparkEnv as container"
 type: project
 tags: [spark, architecture, managers, runtime, scheduling, storage, memory, shuffle]
 ---
